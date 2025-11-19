@@ -3,40 +3,59 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    list-style: none;
-    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #EFF0F3;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 header {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 1440px;
+    max-width: 1440px;
     height: 86px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #EFF0F3;
     box-shadow: 4px 6px 13px 0 rgba(214.62, 214.62, 214.62, 0.25);
-    margin: 0 auto;
-    position: fixed;
-}
-
-nav {
-
+    padding: 0 94px;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    list-style-type: none;
+    gap: 33px;
 }
 
 nav ul li a {
-    color: #000000;
-    height: 25px;
     font-size: 18px;
     font-weight: 400;
+    line-height: 25px;
+    padding: 10px 17px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    border-radius: 4px;
+    background: #6246EA;
+    color: #FFFFFE;
+    padding: 10px 17px;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .lupa {
@@ -48,31 +67,322 @@ nav ul li a {
 .coffee {
     width: 24px;
     height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-.logo {
-    margin: 26px 348px 15px 95px;
+main {
+    display: flex;
+    padding: 164px 94px 263px 94px;
 }
 
-.buybutton {
-    width: 213px;
-    height: 44px;
+main aside:nth-child(1) {
+    margin: 21px 128px 21px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main aside h1 {
+    font-size: 64px;
+    line-height: 89px;
+    font-weight: 400;
+}
+
+main aside p {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 400;
+    border-left: 3px solid black;
+    padding-left: 12px;
+    color: #9A9494;
+}
+
+form {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 17px;
-    border-radius: 4px;
-    background: #6246EA;
-    border: none;
+    gap: 20px;
 }
 
-ul li p {
-    width: 145px;
-    height: 23px;
-    opacity: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25px;
+form input {
+    width: 68%;
+    border: none;
+    border-radius: 12px;
+    height: 67px;
+}
+
+form button {
+    width: 21%;
+    border: none;
+    border-radius: 12px;
+    height: 67px;
+    font-size: 20px;
+    background: lightslategrey;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #6246EA;
     color: #FFFFFE;
+}
+
+form input::placeholder {
+    opacity: 0.5;
+    font-size: 20px;
+    padding-left: 25px;
+}
+
+#content1 {
+    width: 100%;
+    padding: 69px 94px 68px 94px;
+}
+
+.little {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 53px;
+}
+
+.little p:nth-child(1) {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+}
+
+.little p:nth-child(2) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.symbol {
+    width: 6px;
+    height: 14px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 280px;
+    background: white;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.card:hover {
+    background: #6246EA;
+    color: #FFFFFE;
+    border: none;
+    border-radius: 10px;
+}
+
+.content2 {
+    width: 100%;
+    padding: 82px 94px 0 94px;
+    background: white;
+}
+
+.objects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.object {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 30px;
+}
+
+.object h3 {
+    width: 260px;
+    height: 75px;
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+.profiles {
+    display: flex;
+    gap: 70px;
+}
+
+.profile {
+    display: flex;
+    width: 260px;
+    height: 57px;
+    gap: 15px;
+}
+
+.more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 80px 0 80px 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 64px;
+    background: #6246EA;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 58px 372px 58px 372px;
+}
+
+.bottom div {
+    width: 696px;
+    height: 337px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 25px;
+}
+
+.bottom div h2 {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    word-spacing: 10px;
+}
+
+.bottom div p {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #C0C0C0;
+    padding-bottom: 30px;
+}
+
+.bottom div form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.image {
+    position: relative;
+}
+
+.icon {
+    top: 18%;
+    width: 80.07px;
+    height: 106.75px;
+    position: absolute;
+}
+
+footer {
+    background: #E4E5E9;
+}
+
+#logobottom {
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+#logobottom p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+#foot {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 94px 50px 94px;
+}
+
+#social_logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+#social_logo a:nth-child(1) {
+    width: 30px;
+    height: 30px;
+}
+#social_logo a:nth-child(2) {
+    width: 22px;
+    height: 17.94px;
+}
+
+#social_logo a:nth-child(3) {
+    width: 24px;
+    height: 24px;
+}
+
+#social_logo a:nth-child(4) {
+    width: 24px;
+    height: 24px;
+}
+
+
+footer ul h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    padding-bottom: 5px;
+}
+#footlist {
+    display: flex;
+    justify-content: space-between;
+    gap: 95px;
+    list-style-type: none;
+}
+
+#footlist ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#hrp p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    padding: 26px 0;
+}
+#hrp {
+    padding: 0 94px;
+}
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
 }
